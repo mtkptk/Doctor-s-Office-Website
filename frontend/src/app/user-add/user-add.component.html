@@ -1,0 +1,66 @@
+<div class="col-md-4 offset-md-4">
+    <h3>Registration:</h3>
+    
+    <form ngNativeValidate name="registerCommon" #registerCommonForm="ngForm">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" class="form-control" id="username" required [(ngModel)]="username" name="username">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="password" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\n])[A-Za-z].{6,11}$" [(ngModel)]="password" name="password">
+        </div>
+        <div class="mb-3">
+            <label for="confirm_password" class="form-label">Confirm Password:</label>
+            <input type="password" class="form-control" id="confirm_password" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\n])[A-Za-z].{6,11}$" [(ngModel)]="confirm_password" name="confirm_password">
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone:</label>
+            <input type="text" class="form-control" id="phone" required maxlength="11" [(ngModel)]="phone" name="phone">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="email" class="form-control" id="email" required [(ngModel)]="email" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload photo:</label>
+            <input type="file" class="form-control" id="image" accept=".jpg,.png" name="image" (change)="onFileSelected($event)">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Ime:</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="name" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Prezime:</label>
+            <input type="text" class="form-control" id="last_name" required [(ngModel)]="last_name" name="last_name">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Adresa:</label>
+            <input type="text" class="form-control" id="address" required [(ngModel)]="address" name="address">
+        </div>
+        <div *ngIf="lekar" class="mb-3">
+            <div class="mb-3">
+                <label for="licence" class="form-label">Licenca:</label>
+                <input type="text" class="form-control" id="licence" [(ngModel)]="licence" name="licence">
+            </div>
+            <div class="mb-3">
+                <label for="spec" class="form-label">Specijalizacija:</label>
+                <select class="form-control" id="description" [(ngModel)]="spec" name="spec">
+                    <option *ngFor="let a of spec_all">{{a.naziv}}</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="ogranak" class="form-label">Ogranak:</label>
+                <input type="text" class="form-control" id="description" [(ngModel)]="ogranak" name="ogranak">
+            </div>
+        </div>
+        <div class="mb-3">
+            <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="register()">Register</button>
+        </div>
+    </form>
+    <span class="error">{{imageErrorMessage}}</span>
+    <span class="error">{{message}}</span>
+    <br/>
+    <br/>
+    </div>

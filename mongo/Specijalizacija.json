@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "64d793820e3c353f21fbcebb"
+  },
+  "naziv": "ORL",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d793f50e3c353f21fbcec2"
+  },
+  "naziv": "Pedijatar",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d7941d0e3c353f21fbcec6"
+  },
+  "naziv": "Pulmolog",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e6adf0a8d9c6e2311e901a"
+  },
+  "naziv": "Radiolog",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e6ae1ba8d9c6e2311e9020"
+  },
+  "naziv": "Kardiolog",
+  "__v": 0
+}]

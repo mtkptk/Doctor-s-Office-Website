@@ -1,0 +1,32 @@
+
+<h3 style="text-align: center;">O pregledu</h3>
+<br/>
+<div class="row">
+    <div class="col-md-6 justify-content-center">
+        <table class="table table-striped text-center offset-md-1" style="width: 100%;">
+            <tbody>
+                <tr><td>Specijalizacija</td>
+                    <td>{{user.spec}}</td>
+                </tr>
+                <tr>
+                    <td>Naziv</td>
+                    <td>{{user.naziv}}</td>
+                </tr>
+                <tr>
+                    <td>Trajanje:</td>
+                    <td><input type="text" class="form-control" name="trajanje" [(ngModel)]="trajanje" [placeholder]="user.trajanje"></td>
+                    <td><button type="button" class="btn btn-secondary" (click)="edit('trajanje')">Edit</button></td>
+                </tr>
+                <tr>
+                    <td>Cena:</td>
+                    <td><input type="text" class="form-control" name="cena" [(ngModel)]="cena" [placeholder]="user.cena"></td>
+                    <td><button type="button" class="btn btn-secondary" (click)="edit('cena')">Edit</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancel</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<span class="error">{{message}}</span>

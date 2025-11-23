@@ -1,0 +1,28 @@
+<app-pacijent-menu-bar *ngIf="pacijent"></app-pacijent-menu-bar>
+
+<app-user-view [user]="lekar"></app-user-view>
+
+<br/>
+
+<div *ngIf="showPacijenti && pacijent">
+    <h3 style="text-align: center;">Svi pregledi:</h3>
+    <table class="table table-striped text-center align-middle">
+        <thead class="sticky">
+            <tr>
+                <th>Naziv</th>
+                <th>Trajanje[min]</th>
+                <th>Cena[rsd]</th>
+                <th>Odaberi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let a of pregledi">
+                <td>{{a.naziv}}</td>
+                <td>{{a.trajanje}}</td>
+                <td>{{a.cena}}</td>
+                <td><button type="button" class="btn-secondary" (click)="showZakazivanje(a)">Odaberi</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+</div>

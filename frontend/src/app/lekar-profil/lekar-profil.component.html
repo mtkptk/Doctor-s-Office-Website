@@ -1,0 +1,45 @@
+<app-lekar-menu-bar></app-lekar-menu-bar>
+
+
+<app-user-edit *ngIf="showEdit" [user_id]="user._id" (cancelEvent)="return()"></app-user-edit>
+
+
+<div *ngIf="showPacijenti">
+    <h3 style="text-align: center;">Svi pregledi:</h3>
+    <table class="table table-striped text-center align-middle">
+        <thead class="sticky">
+            <tr>
+                <th>Naziv</th>
+                <th>Trajanje[min]</th>
+                <th>Cena[rsd]</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let a of pregledi">
+                <td>{{a.naziv}}</td>
+                <td>{{a.trajanje}}</td>
+                <td>{{a.cena}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+</div>
+
+<div *ngIf="new_ready">
+    <h3>Dodaj pregled sa liste postojecih:</h3>
+    <table>
+        <tr>
+            <select  [(ngModel)]="nov_pregled">
+                <option *ngFor="let a of svi_pregledi" value="{{a._id}}">{{a.naziv}}</option>
+            </select>
+            <br />
+            <button type="button" clas="btn-secondary" (click)="dodaj_pregled()">Dodaj pregled</button>
+        </tr>
+    </table>
+    <br/>
+</div>
+<div *ngIf="!new_ready">
+    Ne mozete da dodate pregled jer vec vrsite sve preglede za Vasu specijalizaciju
+    <br/>
+    <br/>
+</div>

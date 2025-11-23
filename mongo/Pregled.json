@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "64d8037d01ccfa5926b41d07"
+  },
+  "spec": "ORL",
+  "naziv": "Kontrola",
+  "zakaziv": true,
+  "cena": 3000,
+  "trajanje": 30,
+  "request": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e6b08ba8d9c6e2311e9073"
+  },
+  "spec": "Kardiolog",
+  "naziv": "Kontrola",
+  "zakaziv": true,
+  "cena": 3500,
+  "trajanje": 30,
+  "__v": 0,
+  "request": false
+},
+{
+  "_id": {
+    "$oid": "64e6b0faa8d9c6e2311e908c"
+  },
+  "spec": "Kardiolog",
+  "naziv": "Ugradnja baj-pasa",
+  "zakaziv": true,
+  "cena": 43000,
+  "trajanje": 240,
+  "__v": 0,
+  "request": false
+},
+{
+  "_id": {
+    "$oid": "64e6b138a8d9c6e2311e9094"
+  },
+  "spec": "ORL",
+  "naziv": "Bris iz nosa",
+  "zakaziv": true,
+  "cena": 1850,
+  "trajanje": 15,
+  "__v": 0,
+  "request": false
+},
+{
+  "_id": {
+    "$oid": "64e6b149a8d9c6e2311e9098"
+  },
+  "spec": "Pedijatar",
+  "naziv": "Urinokultura",
+  "zakaziv": true,
+  "cena": 800,
+  "trajanje": 12,
+  "__v": 0,
+  "request": false
+},
+{
+  "_id": {
+    "$oid": "64e6b157a8d9c6e2311e909c"
+  },
+  "spec": "Pulmolog",
+  "naziv": "Inhalacija",
+  "zakaziv": true,
+  "cena": 450,
+  "trajanje": 15,
+  "__v": 0,
+  "request": false
+},
+{
+  "_id": {
+    "$oid": "64e6b2f7a8d9c6e2311e90b6"
+  },
+  "spec": "Radiolog",
+  "naziv": "Kontrola",
+  "zakaziv": false,
+  "cena": 2850,
+  "trajanje": 30,
+  "request": false,
+  "__v": 0
+}]

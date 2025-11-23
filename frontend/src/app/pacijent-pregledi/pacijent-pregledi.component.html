@@ -1,0 +1,27 @@
+<app-pacijent-menu-bar></app-pacijent-menu-bar>
+
+<h3 style="text-align: center;">Moji pregledi:</h3>   
+    <table class="table table-striped text-center align-middle" *ngIf="show_termini && termini.length > 0">
+        <thead class="sticky">
+        <tr>
+            <th>Naziv pregleda</th>
+            <th>Specijalizacija</th>
+            <th>Datum i vreme</th>
+            <th>Ogranak</th>
+            <th>Lekar</th>
+            <th>Otkazi pregled</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let a of termini">
+        <tr>
+            <td>{{a.pregled.naziv}}</td>
+            <td>{{a.pregled.spec}}</td>
+            <td>{{write_date(a.start) | date: 'short'}}</td>
+            <td>{{write_ogranak(lekar_id_lekar.get(a.lekar_id))}}</td>
+            <td>{{write_lekar(lekar_id_lekar.get(a.lekar_id))}}</td>
+            <td><button type="button" class="btn-secondary" (click)="otkazi_termin(a)">Otkazi termin</button></td>
+        </tr>
+    </tbody>
+    </table>
+
+    <p *ngIf="termini.length == 0">Nemate zakazanih termina.</p>

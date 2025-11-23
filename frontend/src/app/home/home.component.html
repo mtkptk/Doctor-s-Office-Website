@@ -1,0 +1,23 @@
+
+<div style="margin-left: 10%; margin-right: 10%;">
+<!-- You can now use your library component in app.component.html -->
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img src="{{ slide.img }}" alt="" width="100%" class="img-style">
+        </div>
+    </ngx-slick-carousel>
+</div>
+
+    <br>
+    <h3 style="margin-left: 10%; margin-right: 10%;">O nama:</h3>
+    <p style="margin-left: 10%; margin-right: 10%;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum diam vel tempor fermentum. Donec fringilla, tortor nec ornare mollis, ligula nunc sagittis massa, in pretium quam mi eu lorem. Fusce fermentum rutrum eros id lobortis. In hac habitasse platea dictumst. Quisque laoreet, leo eget tempor laoreet, elit dui vulputate sem, ac varius ante est ac est. Vivamus interdum urna vel quam molestie porta. Nulla pellentesque ornare mollis. Nulla iaculis auctor ultricies. Aliquam et sagittis metus, eget tincidunt lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent dictum auctor rhoncus. Suspendisse quis rutrum ante. Aenean ac mauris quis diam convallis maximus nec nec felis. Aliquam posuere ligula dolor, eget tristique magna iaculis ut. Nulla commodo ligula id dui vehicula, in faucibus urna ullamcorper.
+    </p>
+
+    <br>
+
+    <div style="margin-left: 10%; margin-right: 10%;">
+    <app-list-lekari [ispacijent]=false></app-list-lekari>
+    </div>
+

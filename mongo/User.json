@@ -1,0 +1,130 @@
+[{
+  "_id": {
+    "$oid": "64d6a1c37cf306fe020f8353"
+  },
+  "type": "pacijent",
+  "username": "maki",
+  "password": "aa22ee7676bdbf36c1937b10485a38f9",
+  "phone": "123456789",
+  "email": "matijazec00@gmail.com",
+  "name": "Matija",
+  "last_name": "Zec",
+  "address": "StaTeBriga",
+  "__v": 0,
+  "image_path": "maki.png"
+},
+{
+  "_id": {
+    "$oid": "64d7758f161e5fb857818551"
+  },
+  "type": "admin",
+  "username": "admin",
+  "password": "aa22ee7676bdbf36c1937b10485a38f9",
+  "phone": "123456789",
+  "email": "admin@admin.com",
+  "name": "Admin",
+  "last_name": "Admin",
+  "address": "Admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d7ee4f0e3c353f21fbced9"
+  },
+  "type": "lekar",
+  "username": "luka",
+  "password": "aa22ee7676bdbf36c1937b10485a38f9",
+  "phone": "0112508716",
+  "email": "luka@gmail.com",
+  "name": "Luka",
+  "last_name": "Simeonovic",
+  "licence": "0101456",
+  "address": "Admirala Geprata 11a",
+  "spec": "ORL",
+  "ogranak": "Zarkovo",
+  "__v": 0,
+  "pregledi": [
+    "64d8037d01ccfa5926b41d07"
+  ],
+  "zauzetost": [
+    {
+      "start": {
+        "$numberLong": "1692216120000"
+      },
+      "duration": 1800000,
+      "odmor": false
+    },
+    {
+      "start": {
+        "$numberLong": "1692718800000"
+      },
+      "duration": 1800000,
+      "odmor": false
+    },
+    {
+      "start": {
+        "$numberLong": "1692726360000"
+      },
+      "duration": 1800000,
+      "odmor": false
+    },
+    {
+      "start": {
+        "$numberLong": "1693684920000"
+      },
+      "duration": 79200000,
+      "odmor": true
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64e6a856a8d9c6e2311e8fc5"
+  },
+  "type": "pacijent",
+  "username": "vuk",
+  "password": "aa22ee7676bdbf36c1937b10485a38f9",
+  "phone": "0654632572",
+  "email": "vukiminanadlanu@hotmail.com",
+  "name": "Vuk",
+  "last_name": "Dasic",
+  "address": "Petefijeva 47",
+  "pregledi": [],
+  "zauzetost": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e6ac7ca8d9c6e2311e8ffb"
+  },
+  "type": "lekar",
+  "username": "vesna",
+  "password": "aa22ee7676bdbf36c1937b10485a38f9",
+  "phone": "0112516093",
+  "email": "vesnaivanovic@gmail.com",
+  "name": "Vesna",
+  "last_name": "Ivanovic",
+  "licence": "0101256",
+  "address": "Zarkovacka 25",
+  "spec": "Pedijatar",
+  "ogranak": "Zarkovo",
+  "pregledi": [],
+  "zauzetost": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ea0d039890b581e0c17e00"
+  },
+  "type": "pacijent",
+  "username": "dunja",
+  "password": "aa22ee7676bdbf36c1937b10485a38f9",
+  "phone": "0692516421",
+  "email": "dunjazec@gmail.com",
+  "name": "Dunja",
+  "last_name": "Zec",
+  "address": "Kestenova 7",
+  "pregledi": [],
+  "zauzetost": [],
+  "__v": 0
+}]

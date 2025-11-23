@@ -1,0 +1,27 @@
+<app-menadzer-menu-bar></app-menadzer-menu-bar>
+
+<div *ngIf="showSpec">
+    <form align="center">
+        <input type="text" name="spec" [(ngModel)]="new_spec">
+        <button type="button" class="btn btn-secondary" (click)="add_spec()">Dodaj Specijalizaciju</button>
+        </form>
+    <br/>    
+
+    <h3 style="text-align: center;">Sve specijalizacije:</h3>
+    <table class="table table-striped text-center align-middle">
+        <thead class="sticky">
+        <tr>
+            <th>Naziv</th>
+            <th>Akcija</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let a of spec">
+            <td>{{a.naziv}}</td>
+            <td><button type="button" class="btn btn-secondary" (click)="dodaj_pregled(a.naziv)">Dodaj Pregled</button></td>
+        </tr>
+    </tbody>
+    </table>
+    <br/>
+
+</div>

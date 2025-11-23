@@ -1,0 +1,32 @@
+<app-lekar-menu-bar></app-lekar-menu-bar>
+
+<h3 style="text-align: center;">O meni</h3>
+<br />
+<div class="row">
+    <div class="col-md-6 justify-content-center">
+        <table class="table table-striped text-center offset-md-1" style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td>Razlog dolaska:</td>
+                    <td><input type="textarea" class="form-control" name="razlog" [(ngModel)]="razlog"></td>
+                </tr>
+                <tr>
+                    <td>Dijagnoza:</td>
+                    <td><input type="text" class="form-control" name="dijagnoza" [(ngModel)]="dijagnoza"></td>
+                </tr>
+                <tr>
+                    <td>Terapija:</td>
+                    <td><input type="text" class="form-control" name="terapija" [(ngModel)]="terapija"></td>
+                </tr>
+                <tr>
+                    <td>Kontrola:</td>
+                    <td><input type="datetime-local" class="form-control" name="kontrola" [(ngModel)]="kontrola"></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-secondary" (click)="dodaj()">Dodaj Izvestaj</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<span class="error">{{message}}</span>

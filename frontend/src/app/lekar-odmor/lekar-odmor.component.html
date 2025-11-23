@@ -1,0 +1,22 @@
+<h3 style="text-align: center;">Dodaj odmor</h3>
+<br/>
+<div class="row">
+    <div class="col-md-6 justify-content-center">
+        <table class="table table-striped text-center offset-md-1" style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td>Datum i vreme pocetka odmora</td>
+                    <td><input type="datetime-local" required [(ngModel)]="start"></td>
+                </tr>
+                <tr>
+                    <td>Datum i vreme kraja odmora</td>
+                    <td><input type="datetime-local" required [(ngModel)]="end"></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-secondary" (click)="potvrdi()">Potvrdi odmor</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<span class="error">{{message}}</span>

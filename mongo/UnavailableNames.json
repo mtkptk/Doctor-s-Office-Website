@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "64d69de68db50847d5bc2f0b"
+  },
+  "forbidden": "maki",
+  "email": "matijazec00@gmail.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d7757d161e5fb85781854d"
+  },
+  "forbidden": "admin",
+  "email": "admin@admin.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64d7ee440e3c353f21fbced4"
+  },
+  "forbidden": "luka",
+  "email": "luka@gmail.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e6a6e7a8d9c6e2311e8fbd"
+  },
+  "forbidden": "vuk",
+  "email": "vukiminanadlanu@hotmail.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e6a93ca8d9c6e2311e8fe4"
+  },
+  "forbidden": "vulgar",
+  "email": "vulgar@gmail.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e6ac6ba8d9c6e2311e8ff5"
+  },
+  "forbidden": "vesna",
+  "email": "vesnaivanovic@gmail.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ea0bdd9890b581e0c17df2"
+  },
+  "forbidden": "dunja",
+  "email": "dunjazec@gmail.com",
+  "__v": 0
+}]

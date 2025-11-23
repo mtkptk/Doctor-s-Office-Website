@@ -1,0 +1,34 @@
+<h3 style="text-align: center;">Lekari:</h3>
+<form>
+    <input type="text" name="ime" (change)="search()" [(ngModel)]="search_ime" placeholder="Search by name">
+    <input type="text" name="prezime" (change)="search()" [(ngModel)]="search_prezime" placeholder="Search by last name">
+    <input type="text" name="spec" (change)="search()" [(ngModel)]="search_spec" placeholder="Search by specijalnost">
+    <input *ngIf="ispacijent" type="text" name="ogranak" (change)="search()" [(ngModel)]="search_ogranak" placeholder="Search by ogranak">
+</form>    
+    <table class="table table-striped text-center align-middle">
+        <thead class="sticky">
+        <tr>
+            <th>Slika</th>
+            <th (click)="sort('name')">Ime</th>
+            <th (click)="sort('lastname')">Prezime</th>
+            <th (click)="sort('spec')">Specijalnost</th>
+            <th *ngIf="ispacijent" (click)="sort('ogranak')">Ogranak</th>
+            <th>Learn More</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let a of lekari">
+            <td><div *ngIf="a.image_path != null"><img
+                src="http://127.0.0.1:4000/images/{{ a.image_path }}" class="image"></div>
+        <div *ngIf="a.image_path == null && a.type == 'pacijent'"><img
+                src="http://127.0.0.1:4000/images/pacijent.png" alt="Profile pic" class="image"></div>
+        <div *ngIf="a.image_path == null && a.type == 'lekar'"><img
+                src="http://127.0.0.1:4000/images/lekar.png" alt="Profile pic" class="image"></div></td>
+            <td>{{a.name}}</td>
+            <td>{{a.last_name}}</td>
+            <td>{{a.spec}}</td>
+            <td *ngIf="ispacijent" >{{a.ogranak}}</td>
+            <td><button type="button" class="btn-secondary" (click)="learn_more_about(a._id)">Learn More</button></td>
+        </tr>
+    </tbody>
+    </table>

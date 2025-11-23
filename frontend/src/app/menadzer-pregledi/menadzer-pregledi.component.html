@@ -1,0 +1,35 @@
+<app-menadzer-menu-bar *ngIf="!showEdit"></app-menadzer-menu-bar>
+
+<div *ngIf="showPacijenti">
+    <h3 style="text-align: center;" *ngIf="!isrequest">Svi pregledi:</h3>
+    <h3 style="text-align: center;" *ngIf="isrequest">Svi zahtevi za novim pregledima:</h3>
+    <table class="table table-striped text-center align-middle">
+        <thead class="sticky">
+        <tr>
+            <th>Specijalizacija</th>
+            <th>Naziv</th>
+            <th>Trajanje[min]</th>
+            <th>Cena[rsd]</th>
+            <th  *ngIf="!isrequest">Edit</th>
+            <th  *ngIf="!isrequest">Delete</th>
+            <th *ngIf="isrequest">Odobri</th>
+            <th *ngIf="isrequest">Odbij</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let a of pacijenti">
+            <td>{{a.spec}}</td>
+            <td>{{a.naziv}}</td>
+            <td>{{a.trajanje}}</td>
+            <td>{{a.cena}}</td>
+            <td  *ngIf="!isrequest"><button type="button" (click)="show_edit(a)" class="btn btn-secondary">Edit</button></td>
+            <td  *ngIf="!isrequest"><button type="button" (click)="remove(a)" class="btn btn-danger">Delete</button></td>
+            <td *ngIf="isrequest"><button type="button" (click)="odobri(a)" class="btn btn-secondary">Odobri</button></td>
+            <td *ngIf="isrequest"><button type="button" (click)="obrisi(a)" class="btn btn-secondary">Odbij</button></td>
+        </tr>
+    </tbody>
+    </table>
+    <br/>
+</div>
+
+<app-pregled-edit *ngIf="showEdit" (cancelEvent)="edit_canceled()" [user]="curr_pregled"></app-pregled-edit>

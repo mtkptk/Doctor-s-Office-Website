@@ -1,0 +1,48 @@
+<app-lekar-menu-bar></app-lekar-menu-bar>
+
+<h3 style="text-align: center;">Dolazeci pregledi:</h3>   
+    <table class="table table-striped text-center align-middle" *ngIf="show_termini">
+        <thead class="sticky">
+        <tr>
+            <th>Naziv pregleda</th>
+            <th>Specijalizacija</th>
+            <th>Datum i vreme</th>
+            <th>Otkazi pregled</th>
+            <th>O pacijentu</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let a of termini">
+        <tr>
+            <td>{{a.pregled.naziv}}</td>
+            <td>{{a.pregled.spec}}</td>
+            <td>{{write_date(a.start) | date: 'short'}}</td>
+            <td><button type="button" class="btn-secondary" (click)="otkazi_termin(a)">Otkazi termin</button></td>
+            <td><button type="button" class="btn-secondary" (click)="show_pacijent(a.pacijent_id)">O pacijentu</button></td>
+        </tr>
+    </tbody>
+    </table>
+
+    <p *ngIf="termini.length == 0">Nemate zakazanih termina.</p>
+<br/>
+
+    <h3 style="text-align: center;">Pregledi koji cekaju na izvestaj:</h3>   
+    <table class="table table-striped text-center align-middle" *ngIf="show_termini">
+        <thead class="sticky">
+        <tr>
+            <th>Naziv pregleda</th>
+            <th>Specijalizacija</th>
+            <th>Datum i vreme</th>
+            <th>O pacijentu</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let a of termini_izvestaj">
+        <tr>
+            <td>{{a.pregled.naziv}}</td>
+            <td>{{a.pregled.spec}}</td>
+            <td>{{write_date(a.start) | date: 'short'}}</td>
+            <td><button type="button" class="btn-secondary" (click)="show_pacijent(a.pacijent_id)">O pacijentu</button></td>
+        </tr>
+    </tbody>
+    </table>
+
+    <p *ngIf="termini_izvestaj.length == 0">Nemate zakazanih termina.</p>

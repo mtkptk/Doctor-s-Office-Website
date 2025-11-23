@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "64dc2d8b984f4debcf7df306"
+  },
+  "kada": {
+    "$numberLong": "1692151179014"
+  },
+  "lekar_ime": "Luka Simeonovic",
+  "lekar_spec": "ORL",
+  "razlog": "Nije se dobro osecao nesto...",
+  "dijagnoza": "J20",
+  "terapija": "Hemomicin",
+  "kontrola": {
+    "$numberLong": "1692410340000"
+  },
+  "pacijent_id": "64d6a1c37cf306fe020f8353",
+  "lekar_id": "64d7ee4f0e3c353f21fbced9",
+  "termin_id": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e4d99e8b72eb40a9364605"
+  },
+  "kada": {
+    "$numberLong": "1692719518589"
+  },
+  "lekar_ime": "Luka Simeonovic",
+  "lekar_spec": "ORL",
+  "razlog": "Lose se osecao u drugom uhu",
+  "dijagnoza": "Otitis media",
+  "terapija": "Amoksicilin ",
+  "kontrola": {
+    "$numberLong": "1692805860000"
+  },
+  "pacijent_id": "64d6a1c37cf306fe020f8353",
+  "lekar_id": "64d7ee4f0e3c353f21fbced9",
+  "termin_id": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e4dacd8b72eb40a9364644"
+  },
+  "kada": {
+    "$numberLong": "1692719821485"
+  },
+  "lekar_ime": "Luka Simeonovic",
+  "lekar_spec": "ORL",
+  "razlog": "Svratio je malo...",
+  "dijagnoza": "Hipohondrija :(",
+  "terapija": "Lepiti magicne nalepnice po centrima cakri",
+  "kontrola": {
+    "$numberLong": "1693583760000"
+  },
+  "pacijent_id": "64d6a1c37cf306fe020f8353",
+  "lekar_id": "64d7ee4f0e3c353f21fbced9",
+  "termin_id": null,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ea10439890b581e0c17ea5"
+  },
+  "kada": {
+    "$numberLong": "1693061187799"
+  },
+  "lekar_ime": "Testino Testovic",
+  "lekar_spec": "Radiolog",
+  "razlog": "Bol.... u dusi....",
+  "dijagnoza": "H28: Losing Hope",
+  "terapija": "Mazati Rich Hand Cream svakog dana... po malo.........",
+  "kontrola": {
+    "$numberLong": "1816613160000"
+  },
+  "pacijent_id": "64ea0d039890b581e0c17e00",
+  "lekar_id": "64e6bf1b9890b581e0c17dab",
+  "termin_id": null,
+  "__v": 0
+}]

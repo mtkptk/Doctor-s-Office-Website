@@ -1,0 +1,54 @@
+<h3 style="text-align: center;">O meni</h3>
+<br/>
+<div class="row">
+    <div class="col-md-6 justify-content-center">
+        <table class="table table-striped text-center offset-md-1" style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td>Ime:</td>
+                    <td>{{user.name}}</td>
+                </tr>
+                <tr>
+                    <td>Prezime:</td>
+                    <td>{{user.last_name}}</td>
+                </tr>
+                <tr>
+                    <td>Telefon:</td>
+                    <td>{{user.phone}}</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>{{user.email}}</td>
+                </tr>
+                    <tr *ngIf="user.type === 'lekar'">
+                        <td>Licenca:</td>
+                        <td>{{user.licence}}</td>
+                    </tr>
+                    <tr *ngIf="user.type === 'lekar'">
+                        <td>Specijalizacija:</td>
+                        <td>{{user.spec}}</td>
+                    </tr>
+                    <tr *ngIf="user.type === 'lekar'"> 
+                        <td>Ogranak:</td>
+                        <td>{{user.ogranak}}</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="col-md-6 text-center">
+        <table class="table text-center align-middle offset-md-2">
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <div *ngIf="user.image_path != null"><img
+                                src="http://127.0.0.1:4000/images/{{ user.image_path }}" class="image"></div>
+                        <div *ngIf="user.image_path == null && user.type == 'pacijent'"><img
+                                src="http://127.0.0.1:4000/images/pacijent.png" alt="Profile pic" class="image"></div>
+                        <div *ngIf="user.image_path == null && user.type == 'lekar'"><img
+                                src="http://127.0.0.1:4000/images/lekar.png" alt="Profile pic" class="image"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

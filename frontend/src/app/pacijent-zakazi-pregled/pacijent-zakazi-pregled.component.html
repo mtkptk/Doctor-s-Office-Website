@@ -1,0 +1,29 @@
+<app-pacijent-menu-bar></app-pacijent-menu-bar>
+
+
+<h3 style="text-align: center;">Zakazi pregled {{pregled.naziv}}</h3>
+<br/>
+<div class="row">
+    <div class="col-md-6 justify-content-center">
+        <table class="table table-striped text-center offset-md-1" style="width: 100%;" *ngIf="show">
+            <tbody>
+                <tr>
+                    <td>Datum i vreme</td>
+                    <td><input type="datetime-local" required [(ngModel)]="start"></td>
+                </tr>
+                <tr>
+                    <td>Trajanje[min]</td>
+                    <td>{{pregled.trajanje}}</td>
+                </tr>
+                <tr>
+                    <td>Cena:</td>
+                    <td>{{pregled.cena}}</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-secondary" (click)="zakazi()">Zakazi termin</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<span class="error">{{message}}</span>

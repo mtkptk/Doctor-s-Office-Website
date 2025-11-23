@@ -1,0 +1,69 @@
+[{
+  "_id": {
+    "$oid": "64dc121f1778006fd5eb580b"
+  },
+  "start": {
+    "$numberLong": "1692216120000"
+  },
+  "duration": 1800000,
+  "lekar_id": "64d7ee4f0e3c353f21fbced9",
+  "pacijent_id": "64d6a1c37cf306fe020f8353",
+  "pregled": {
+    "_id": "64d8037d01ccfa5926b41d07",
+    "spec": "ORL",
+    "naziv": "Kontrola",
+    "zakaziv": true,
+    "cena": 3000,
+    "trajanje": 30,
+    "request": false,
+    "__v": 0
+  },
+  "izvestaj": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e4d6cb8b72eb40a93645a2"
+  },
+  "start": {
+    "$numberLong": "1692718800000"
+  },
+  "duration": 1800000,
+  "lekar_id": "64d7ee4f0e3c353f21fbced9",
+  "pacijent_id": "64d6a1c37cf306fe020f8353",
+  "pregled": {
+    "_id": "64d8037d01ccfa5926b41d07",
+    "spec": "ORL",
+    "naziv": "Kontrola",
+    "zakaziv": true,
+    "cena": 3000,
+    "trajanje": 30,
+    "request": false,
+    "__v": 0
+  },
+  "izvestaj": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e4d8458b72eb40a93645cc"
+  },
+  "start": {
+    "$numberLong": "1692726360000"
+  },
+  "duration": 1800000,
+  "lekar_id": "64d7ee4f0e3c353f21fbced9",
+  "pacijent_id": "64d6a1c37cf306fe020f8353",
+  "pregled": {
+    "_id": "64d8037d01ccfa5926b41d07",
+    "spec": "ORL",
+    "naziv": "Kontrola",
+    "zakaziv": true,
+    "cena": 3000,
+    "trajanje": 30,
+    "request": false,
+    "__v": 0
+  },
+  "izvestaj": false,
+  "__v": 0
+}]

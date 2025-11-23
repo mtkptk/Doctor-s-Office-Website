@@ -1,0 +1,88 @@
+<h3 style="text-align: center;">O meni</h3>
+<br/>
+<div *ngIf="showUser" class="row">
+    <div class="col-md-6 justify-content-center">
+        <table class="table table-striped text-center offset-md-1" style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td>Ime:</td>
+                    <td><input type="text" class="form-control" name="name" [(ngModel)]="name" [placeholder]="user.name"></td>
+                    <td><button type="button" class="btn btn-secondary" (click)="edit('name')">Edit</button></td>
+                </tr>
+                <tr>
+                    <td>Prezime:</td>
+                    <td><input type="text" class="form-control" name="last_name" [(ngModel)]="last_name" [placeholder]="user.last_name"></td>
+                    <td><button type="button" class="btn btn-secondary" (click)="edit('last_name')">Edit</button></td>
+                </tr>
+                <tr>
+                    <td>Adresa:</td>
+                    <td><input type="text" class="form-control" name="address" [(ngModel)]="address" [placeholder]="user.address"></td>
+                    <td><button type="button" class="btn btn-secondary" (click)="edit('address')">Edit</button></td>
+                </tr>
+                <tr>
+                    <td>Telefon:</td>
+                    <td><input type="text" class="form-control" name="phone" [(ngModel)]="phone" [placeholder]="user.phone"></td>
+                    <td><button type="button" class="btn btn-secondary" (click)="edit('phone')">Edit</button></td>
+                </tr>
+                <tr *ngIf="user.type != 'lekar'">
+                    <td>Email:</td>
+                    <td><input type="text" class="form-control" name="email" [(ngModel)]="email" [placeholder]="user.email"></td>
+                    <td><button type="button" class="btn btn-secondary" (click)="edit('email')">Edit</button></td>
+                </tr>
+                    <tr *ngIf="user.type === 'lekar'">
+                        <td>Licenca:</td>
+                        <td><input type="text" class="form-control" name="licence" [(ngModel)]="licence" [placeholder]="user.licence"></td>
+                        <td><button type="button" class="btn btn-secondary" (click)="edit('licence')">Edit</button></td>
+                    </tr>
+                    <tr *ngIf="user.type === 'lekar'">
+                        <td>Specijalizacija:</td>
+                        <td>
+                            <select class="form-control" id="description"  [(ngModel)]="spec" name="spec">
+                                <option selected>{{user.spec}}</option>
+                                <option *ngFor="let a of spec_all">{{a.naziv}}</option>
+                            </select></td>
+                        <td><button type="button" class="btn btn-secondary" (click)="edit('spec')">Edit</button></td>
+                    </tr>
+                    <tr *ngIf="user.type === 'lekar' && subjekat.type === 'admin'"> 
+                        <td>Ogranak:</td>
+                        <td><input type="text" class="form-control" name="ogranak" [(ngModel)]="ogranak" [placeholder]="user.ogranak"></td>
+                        <td><button type="button" class="btn btn-secondary" (click)="edit('ogranak')">Edit</button></td>
+                    </tr>
+                    <tr *ngIf="user.type === 'lekar'">
+                        <td>Email</td>
+                        <td>{{user.email}}</td>
+                    </tr>
+                    <tr *ngIf="user.type === 'lekar' && subjekat.type != 'admin'">
+                        <td>Ogranak</td>
+                        <td>{{user.ogranak}}</td>
+                    </tr>
+                    <tr>
+                <tr>
+                    <td><button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancel</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="col-md-6 text-center">
+        <table class="table text-center align-middle offset-md-2">
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <div *ngIf="user.image_path != null"><img
+                                src="http://127.0.0.1:4000/images/{{ user.image_path }}" class="image"></div>
+                        <div *ngIf="user.image_path == null && user.type == 'pacijent'"><img
+                                src="http://127.0.0.1:4000/images/pacijent.png" alt="Profile pic" class="image"></div>
+                        <div *ngIf="user.image_path == null && user.type == 'lekar'"><img
+                                src="http://127.0.0.1:4000/images/lekar.png" alt="Profile pic" class="image"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload photo:</td>
+                    <td><input type="file" required="false" accept=".jpg,.png" (change)="onFileSelected($event)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<span class="error" *ngIf="imageErrorMessage">{{imageErrorMessage}} <br /></span>
+<span class="error">{{message}}</span>

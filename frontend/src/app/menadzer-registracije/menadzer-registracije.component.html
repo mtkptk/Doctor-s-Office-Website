@@ -1,0 +1,33 @@
+<app-menadzer-menu-bar></app-menadzer-menu-bar>
+
+<br>
+
+<h5 *ngIf="pacijenti.length == 0" class="text-center align-middle">Nema zahteva za registraciju</h5>
+
+<h5 *ngIf="pacijenti.length != 0">Svi zahtevi:</h5>
+<div *ngIf="pacijenti.length != 0" class="table-container">
+    <table class="table table-striped text-center align-middle">
+      <thead class="sticky">
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Username</th>
+            <th>Telefon</th>
+            <th>E-mail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of pacijenti">
+            <td>{{a.name}}</td>
+            <td>{{a.last_name}}</td>
+            <td>{{a.username}}</td>
+            <td>{{a.phone}}</td>
+            <td>{{a.email}}</td>
+            <td><button type="button" (click)="approve(a)" class="btn btn-secondary">Approve</button></td>
+            <td><button type="button" (click)="remove(a)" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <br/>
+    <br/>
+</div>

@@ -1,0 +1,51 @@
+<app-lekar-menu-bar *ngIf="islekar"></app-lekar-menu-bar>
+<app-pacijent-menu-bar *ngIf="!islekar"></app-pacijent-menu-bar>
+
+<h3 align="center">Izvestaji</h3>
+<br/>
+<div class="col-md-6 justify-content-center offset-md-3" *ngIf="termini.length!=0"> 
+<select [(ngModel)]="termin_id" name="termin">
+    <option value={{t._id}} *ngFor="let t of termini">{{write_date(t.start) | date:'short'}} {{t.pregled.naziv}} {{t.pregled.spec}}</option>
+</select>
+<button type="button" (click)="dodaj_izvestaj()" class="btn-secondary">Dodaj Izvestaj</button>
+</div>
+<br/>
+<div class="row">
+    <div class="col-md-6 justify-content-center offset-md-2">
+        <table class="table table-striped text-center offset-md-1" style="width: 100%;">
+            <tbody *ngFor="let i of izvestaji">
+                <tr>
+                    <td>Datum i vreme:</td>
+                    <td>{{write_date(i.kada) | date:'short'}}</td>
+                </tr>
+                <tr>
+                    <td>Lekar:</td>
+                    <td>{{i.lekar_ime}}</td>
+                </tr>
+                <tr>
+                    <td>Specijalizacija:</td>
+                    <td>{{i.lekar_spec}}</td>
+                </tr>
+                <tr>
+                    <td>Razlog:</td>
+                    <td>{{i.razlog}}</td>
+                </tr>
+                <tr>
+                    <td>Dijagnoza:</td>
+                    <td>{{i.dijagnoza}}</td>
+                </tr>
+                <tr>
+                    <td>Terapija:</td>
+                    <td>{{i.terapija}}</td>
+                </tr>
+                <tr>
+                    <td>Kontrola:</td>
+                    <td>{{write_date(i.kontrola) | date:'short'}}</td>
+                </tr>
+                <tr><br/></tr>
+                <tr><br/></tr>
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<app-menadzer-menu-bar></app-menadzer-menu-bar>
+
+<div class="col-md-4 offset-md-4">
+    <h3>Dodavanje pregleda: {{spec}}</h3>
+    
+    <form ngNativeValidate name="registerCommon" #registerCommonForm="ngForm">
+        <div class="mb-3">
+            <label for="naziv" class="form-label">Naziv:</label>
+            <input type="text" class="form-control" id="naziv" required [(ngModel)]="naziv" name="naziv">
+        </div>
+        <div class="mb-3">
+            <label for="cena" class="form-label">Cena[rsd]:</label>
+            <input type="number" class="form-control" min=0 required id="cena" [(ngModel)]="cena" name="cena">
+        </div>
+        <div class="mb-3">
+            <label for="trajanje" class="form-label">Trajanje[min]:</label>
+            <input type="number" class="form-control" id="trajanje" min="0"  [(ngModel)]="trajanje" name="trajanje">
+        </div>
+        <div class="mb-3">
+            <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="add_pregled()">Dodaj</button>
+        </div>
+    </form>
+    <span class="error">{{message}}</span>
+    <br/>
+    <br/>
+    </div>
